@@ -1,0 +1,45 @@
+{
+  "name": "strapi-plugin-tag-manager",
+  "version": "1.0.0",
+  "description": "Tag bubbles input with autocomplete and auto-creation for Strapi 5. Type, search, create — all from one field.",
+  "license": "MIT",
+  "author": "Yatin Godse",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yatingodse/strapi-plugin-tag-manager.git"
+  },
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "strapi5",
+    "tags",
+    "tag-manager",
+    "tag-input",
+    "autocomplete",
+    "custom-field"
+  ],
+  "strapi": {
+    "name": "tag-manager",
+    "description": "Tag manager with autocomplete and auto-creation",
+    "kind": "plugin",
+    "displayName": "Tag Manager"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "source": "./admin/src/index.ts",
+      "import": "./admin/src/index.ts",
+      "require": "./admin/src/index.ts",
+      "default": "./admin/src/index.ts"
+    },
+    "./strapi-server": {
+      "source": "./server/src/index.js",
+      "import": "./server/src/index.js",
+      "require": "./server/src/index.js",
+      "default": "./server/src/index.js"
+    }
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^5.0.0"
+  }
+}
